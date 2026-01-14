@@ -20,12 +20,7 @@ Your repository is mostly in good shape, but **PR #1 has merge conflicts** that 
 - **Branch:** copilot/create-website-foundations
 - **Mergeable:** NO (status: "dirty")
 - **Changes:** 11 commits, 347 additions, 2 files changed
-- **Contains:** Full TidyToronto website with:
-  - Professional cleaning services branding
-  - Pageclip form integration (configured)
-  - Responsive design with Tailwind CSS
-  - Multiple service offerings
-  - Customer testimonials
+- **Contains:** Enhanced website features with complete business functionality
   
 **Action needed:** You need to resolve merge conflicts before this can be merged to main.
 
@@ -58,6 +53,9 @@ PR #1 contains a more complete website with enhanced features. To merge it:
    ```
 
 3. **Resolve any conflicts** in the files (likely `index.html` and possibly `CNAME`)
+   - Git will mark conflicted sections with `<<<<<<<`, `=======`, and `>>>>>>>`
+   - Manually edit the files to choose which changes to keep
+   - Remove the conflict markers after deciding
 
 4. **Commit the resolution:**
    ```bash
@@ -91,9 +89,9 @@ If you're happy with the current website on main:
 **You don't need to update or merge anything urgently** unless you want the enhanced website from PR #1. Your current setup is working fine. However, **if you want the features from PR #1**, you'll need to resolve the merge conflicts first.
 
 The merge conflicts likely occurred because:
-- PR #2 was merged first (simple website)
-- PR #1 was created from an earlier state
-- Both modified `index.html` with different content
-- Main branch now has the simpler version, while PR #1 has the enhanced version
+- PR #1 was created from an earlier commit in the repository's history
+- PR #2 was merged to main first, advancing the main branch
+- This created divergent histories where both branches modified the same files
+- Main branch now has one version, while PR #1 has changes based on an older state
 
 **My Recommendation:** If you prefer the enhanced website with more features from PR #1, resolve the conflicts and merge it. Otherwise, close PR #1 and you're all set!
